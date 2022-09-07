@@ -10,6 +10,19 @@
       var todos = ['Item 1', 'Item 2', 'Item 3'];
 
       console.log(todos);
+
+      function add(new_item) {
+        todos.push(new_item);
+        console.log(todos);
+      }
+
+      function edit(item_indx, updated_item) {
+        todos[item_indx] = updated_item;
+        console.log(todos);
+      }
+      
+
+      todos.splice(0,1);
     </script>
   </body>
 </html>

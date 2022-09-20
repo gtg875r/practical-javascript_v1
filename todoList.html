@@ -7,22 +7,30 @@
 
   <body>
     <script>
-      var todos = ['Item 1', 'Item 2', 'Item 3'];
+      var todos = [
+        {todoText:'Item 1', completed: false}, 
+        {todoText:'Item 2', completed: false}, 
+        {todoText:'Item 3', completed: false}
+      ];
 
       console.log(todos);
 
       function add(new_item) {
-        todos.push(new_item);
+        todos.push({todoText:new_item, completed: false});
         console.log(todos);
       }
 
       function edit(item_indx, updated_item) {
-        todos[item_indx] = updated_item;
+        todos[item_indx].todoText = updated_item;
         console.log(todos);
       }
-      
 
-      todos.splice(0,1);
+      function remove(the_index) {
+        todos.splice(the_index, 1);
+        console.log(todos);
+      }
+
+      
     </script>
   </body>
 </html>

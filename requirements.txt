@@ -1,5 +1,15 @@
+Version 6
+[] It should have a function for toggling all todos.
+[] If everything is false ==> change everything to true.
+[] If everything is true ==> change everything to false.
+[] If mixed ==> change everthing to true
+
+Version 5
+[X] It should have a function for displaying todos.
+[X] displayTodos should show the todoText and completed properties.
+
 Version 4
-[] It should have a function to toggle a todo.
+[X] It should have a function to toggle a todo.
 
 Version 3
 [X] We should initialize the todos variable with objects.

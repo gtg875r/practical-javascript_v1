@@ -13,21 +13,42 @@
         {todoText:'Item 3', completed: false}
       ];
 
-      console.log(todos);
+      displayTodos(todos);
 
       function add(new_item) {
         todos.push({todoText:new_item, completed: false});
-        console.log(todos);
+        displayTodos(todos);
       }
 
       function edit(item_indx, updated_item) {
         todos[item_indx].todoText = updated_item;
-        console.log(todos);
+        displayTodos(todos);
       }
 
       function remove(the_index) {
         todos.splice(the_index, 1);
-        console.log(todos);
+        displayTodos(todos);
+      }
+
+      function toggle(position) {
+        // 1. if todo at position has .completed equal to true, then make it false
+        // 2. if todo at position has. completed qual to false, then make it true
+        // 3. display the todos to the console
+        
+        if (todos[position].completed === true) {
+          todos[position].completed = false;
+        } else if (todos[position].completed === false) {
+          todos[position].completed = true;
+        }
+        displayTodos(todos);
+        
+      }
+
+      function displayTodos(todos) {
+        for (var i = 0; i < todos.length; i++) {
+          console.log(todos[i]);
+        }
+        
       }
 
       
